@@ -24,4 +24,12 @@ export const Alarm = {
   clearAll: async () => {
     await chrome.alarms.clearAll();
   },
+
+  /**
+   * Retrieves the alarm with the given name.
+   * @param {string} name - The unique identifier for the alarm to be retrieved.
+   */
+  get: async (name: string): Promise<chrome.alarms.Alarm> => {
+    return await chrome.alarms.get(name);
+  },
 };
