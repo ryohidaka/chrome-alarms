@@ -13,10 +13,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      # Uncomment the following after cloning
-      - name: No operation
-        run: echo "No operation"
-# - uses: google-github-actions/release-please-action@v3
-#   with:
-#     release-type: node
-#     package-name: chrome-alarms
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: chrome-alarms
