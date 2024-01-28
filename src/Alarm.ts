@@ -32,4 +32,11 @@ export const Alarm = {
   get: async (name: string): Promise<chrome.alarms.Alarm> => {
     return await chrome.alarms.get(name);
   },
+
+  /**
+   * Retrieves all alarms.
+   */
+  getAll: async (): Promise<chrome.alarms.Alarm[]> => {
+    return await chrome.alarms.getAll();
+  },
 };
