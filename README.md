@@ -10,6 +10,19 @@ Helper for `chrome.alarms` API.
 
 ## Notes
 
+To use the `chrome.alarms` API, declare the `"alarms"` permission in the [manifest](https://developer.chrome.com/docs/extensions/reference/manifest):
+
+```json
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "alarms"
+  ],
+  ...
+}
+```
+
 ## Installation
 
 You can install this library using npm:
@@ -18,7 +31,67 @@ You can install this library using npm:
 npm install chrome-alarms
 ```
 
-## Usage
+## Properties
+
+| Key               | Type   | Optional | Description                                                                                   |
+| ----------------- | ------ | -------- | --------------------------------------------------------------------------------------------- |
+| `name`            | string |          | Name of this alarm.                                                                           |
+| `periodInMinutes` | number | ◯        | If not null, the alarm is a repeating alarm and will fire again in `periodInMinutes` minutes. |
+
+## Methods
+
+### `create`
+
+Creates an alarm. If there is another alarm with the same name (or no name if none is specified), it will be cancelled and replaced by this alarm.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+const name = "test";
+const periodInMinutes = 1;
+
+await Alarm.create(name, periodInMinutes);
+```
+
+### `clear`
+
+Clears the alarm with the given name.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+const name = "test";
+
+await Alarm.clear(name);
+```
+
+### `get`
+
+Retrieves details about the specified alarm.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+const name = "test";
+
+const alarm = await Alarm.get(name);
+console.log(alarm);
+
+// Output: Object{ name: "test", periodInMinutes: 1, scheduledTime: 1706435598914.826 }
+```
+
+### `getAll`
+
+Gets an array of all the alarms.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+const alarms = await Alarm.getAll();
+console.log(alarms);
+
+// Output: Array[{ name: "test", periodInMinutes: 1, scheduledTime: 1706435598914.826 }]
+```
 
 ## Link
 
