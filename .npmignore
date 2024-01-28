@@ -5,6 +5,7 @@ tsconfig.json
 ## Tests
 jest.config.js
 /tests
+jest.setup.js
 
 ## Prettier
 .prettierignore
