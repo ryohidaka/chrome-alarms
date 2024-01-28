@@ -9,4 +9,12 @@ export const Alarm = {
       periodInMinutes,
     });
   },
+
+  /**
+   * Removes the alarm with the given name.
+   * @param {string} name - The unique identifier for the alarm to be removed.
+   */
+  clear: async (name: string) => {
+    await chrome.alarms.clear(name);
+  },
 };
