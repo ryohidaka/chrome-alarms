@@ -17,4 +17,11 @@ export const Alarm = {
   clear: async (name: string) => {
     await chrome.alarms.clear(name);
   },
+
+  /**
+   * Removes all alarms.
+   */
+  clearAll: async () => {
+    await chrome.alarms.clearAll();
+  },
 };
