@@ -15,11 +15,8 @@ To use the `chrome.alarms` API, declare the `"alarms"` permission in the [manife
 ```json
 {
   "name": "My extension",
-  ...
-  "permissions": [
-    "alarms"
-  ],
-  ...
+
+  "permissions": ["alarms"]
 }
 ```
 
