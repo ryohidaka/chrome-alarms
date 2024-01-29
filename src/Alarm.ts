@@ -10,7 +10,7 @@ export const Alarm = {
     periodInMinutes?: number,
     callback: () => void = () => {},
   ) => {
-    await chrome.alarms.create(
+    chrome.alarms.create(
       name,
       {
         periodInMinutes,
@@ -28,7 +28,7 @@ export const Alarm = {
     name: string,
     callback: (wasCleared: boolean) => void = (_wasCleared) => {},
   ) => {
-    await chrome.alarms.clear(name, callback);
+    chrome.alarms.clear(name, callback);
   },
 
   /**
@@ -38,7 +38,7 @@ export const Alarm = {
   clearAll: async (
     callback: (wasCleared: boolean) => void = (_wasCleared) => {},
   ) => {
-    await chrome.alarms.clearAll(callback);
+    chrome.alarms.clearAll(callback);
   },
 
   /**
