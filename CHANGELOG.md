@@ -5,6 +5,27 @@
 
 ### Features
 
+* Add callback to create(), clear() and clearAll(). ([e80a967](https://github.com/ryohidaka/chrome-alarms/commit/e80a9674cd78225559264ba9c94822967a402a99))
+* Add function to wrap chrome.alarms.clear. ([0904dee](https://github.com/ryohidaka/chrome-alarms/commit/0904dee7ed188b004e0e1ab8d523472a23766a7b))
+* Add function to wrap chrome.alarms.clearAll. ([e44eef4](https://github.com/ryohidaka/chrome-alarms/commit/e44eef4313ab9f25b26e38f1a2a1f504f1258ad3))
+* Add function to wrap chrome.alarms.create. ([9516a37](https://github.com/ryohidaka/chrome-alarms/commit/9516a37021044417a092c954e4769f7aee33a517))
+* Add function to wrap chrome.alarms.get. ([8ae0130](https://github.com/ryohidaka/chrome-alarms/commit/8ae0130ed3d97a1a376f430f8fa411baec4ec6ad))
+* Add function to wrap chrome.alarms.getAll. ([eb1d303](https://github.com/ryohidaka/chrome-alarms/commit/eb1d3030f4db6ceccac886e91c5d0a46c0774ade))
+* Add tests. ([cd49994](https://github.com/ryohidaka/chrome-alarms/commit/cd499942e01cb304809171ee2972425f8dc69cb0))
+* Combined release and release-please workflow. ([cac8a66](https://github.com/ryohidaka/chrome-alarms/commit/cac8a66a8cb255b7f8227f36632725720946c16f))
+* Install @types/chrome ([395c101](https://github.com/ryohidaka/chrome-alarms/commit/395c1017ddf78233932b4c159e6b3edcc9160d55))
+* Install chrome. ([993d5f5](https://github.com/ryohidaka/chrome-alarms/commit/993d5f5d1d6c0150cb89baff8f4cab41681de2d8))
+
+
+### Bug Fixes
+
+* Remove un-necessary await. ([49c0ee7](https://github.com/ryohidaka/chrome-alarms/commit/49c0ee798c5dba7ffe018ae8d32e8bbcc7343dd6))
+
+## 1.0.0 (2024-01-29)
+
+
+### Features
+
 * Add function to wrap chrome.alarms.clear. ([c45a5d9](https://github.com/ryohidaka/chrome-alarms/commit/c45a5d99e2599b788aedb930f9f26d35f1eb00ac))
 * Add function to wrap chrome.alarms.clearAll. ([b20e1b1](https://github.com/ryohidaka/chrome-alarms/commit/b20e1b1ab14a28982ef511e25f1575e306a6b72d))
 * Add function to wrap chrome.alarms.create. ([291734b](https://github.com/ryohidaka/chrome-alarms/commit/291734b1200e8ebfb25159709d2ad7866f38c66b))
