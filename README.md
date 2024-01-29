@@ -62,6 +62,16 @@ const name = "test";
 await Alarm.clear(name);
 ```
 
+### `clearAll`
+
+Clears all alarms.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+await Alarm.clearAll();
+```
+
 ### `get`
 
 Retrieves details about the specified alarm.
