@@ -18,20 +18,34 @@ describe("Alarm", () => {
   it("should create an alarm", async () => {
     const name = "test";
     const periodInMinutes = 1;
+    const callback = () => {};
 
-    await Alarm.create(name, periodInMinutes);
+    await Alarm.create(name, periodInMinutes, callback);
 
-    expect(chrome.alarms.create).toHaveBeenCalledWith(name, {
-      periodInMinutes,
-    });
+    expect(chrome.alarms.create).toHaveBeenCalledWith(
+      name,
+      {
+        periodInMinutes,
+      },
+      callback,
+    );
   });
 
   it("should clear an alarm", async () => {
     const name = "test";
+    const callback = (_wasCleared: boolean) => {};
 
-    await Alarm.clear(name);
+    await Alarm.clear(name, callback);
 
-    expect(chrome.alarms.clear).toHaveBeenCalledWith(name);
+    expect(chrome.alarms.clear).toHaveBeenCalledWith(name, callback);
+  });
+
+  it("should clear all alarms", async () => {
+    const callback = (_wasCleared: boolean) => {};
+
+    await Alarm.clearAll(callback);
+
+    expect(chrome.alarms.clearAll).toHaveBeenCalled();
   });
 
   it("should get alarm by name", async () => {
