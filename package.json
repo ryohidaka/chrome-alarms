@@ -1,7 +1,7 @@
 {
   "name": "chrome-alarms",
   "version": "1.0.0",
-  "description": "Helper for `chrome.alarms` API.",
+  "description": "Helper for chrome.alarms API.",
   "keywords": [
     "chrome",
     "extension",
