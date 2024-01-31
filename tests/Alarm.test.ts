@@ -7,6 +7,9 @@ jest.mock("chrome", () => ({
     clearAll: jest.fn(),
     get: jest.fn().mockImplementation(() => Promise.resolve()),
     getAll: jest.fn().mockImplementation(() => Promise.resolve()),
+    onAlarm: {
+      addListener: jest.fn(),
+    },
   },
 }));
 
@@ -60,5 +63,13 @@ describe("Alarm", () => {
 
     expect(chrome.alarms.getAll).toHaveBeenCalled();
     expect(alarms).toEqual(undefined);
+  });
+
+  it("should add an alarm listener", () => {
+    const callback = jest.fn();
+
+    Alarm.onAlarm(callback);
+
+    expect(chrome.alarms.onAlarm.addListener).toHaveBeenCalledWith(callback);
   });
 });

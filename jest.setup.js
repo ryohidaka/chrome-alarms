@@ -5,5 +5,8 @@ global.chrome = {
     clearAll: jest.fn(),
     get: jest.fn().mockImplementation(() => Promise.resolve()),
     getAll: jest.fn().mockImplementation(() => Promise.resolve()),
+    onAlarm: {
+      addListener: jest.fn(),
+    },
   },
 };
