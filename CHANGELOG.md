@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/ryohidaka/chrome-alarms/compare/v1.1.0...v1.2.0) (2024-01-31)
+
+
+### Features
+
+* Add function to wrap chrome.alarms.onAlarm. ([eb5b6bc](https://github.com/ryohidaka/chrome-alarms/commit/eb5b6bc2ab21972588441282e0e4728bc72fc747))
+* Add test to onAlarm(). ([58eff26](https://github.com/ryohidaka/chrome-alarms/commit/58eff26110253a7bdc6503f052335da2bceeed06))
+
 ## [1.1.0](https://github.com/ryohidaka/chrome-alarms/compare/v1.0.0...v1.1.0) (2024-01-29)
 
 
