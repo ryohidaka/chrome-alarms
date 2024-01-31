@@ -102,6 +102,20 @@ console.log(alarms);
 // Output: Array[{ name: "test", periodInMinutes: 1, scheduledTime: 1706435598914.826 }]
 ```
 
+### `onAlarm`
+
+Fired when an alarm has elapsed. Useful for event pages.
+
+```typescript
+import { Alarm } from "chrome-alarms";
+
+Alarm.onAlarm((alarm) => {
+  console.log(alarm);
+});
+
+// Output: Object{ name: "test", periodInMinutes: 1, scheduledTime: 1706435598914.826 }
+```
+
 ## Link
 
 - [chrome.alarms](https://developer.chrome.com/docs/extensions/reference/api/alarms)
