@@ -55,4 +55,17 @@ export const Alarm = {
   getAll: async (): Promise<chrome.alarms.Alarm[]> => {
     return await chrome.alarms.getAll();
   },
+
+  /**
+   * Fired when an alarm has elapsed. Useful for event pages.
+   *
+   * @param {function} callback - The function to be executed when the alarm is triggered.
+   */
+  onAlarm: (
+    callback: (alarm: chrome.alarms.Alarm) => void = (
+      _alarm: chrome.alarms.Alarm,
+    ) => {},
+  ) => {
+    chrome.alarms.onAlarm.addListener(callback);
+  },
 };
